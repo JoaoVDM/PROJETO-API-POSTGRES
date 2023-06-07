@@ -1,0 +1,32 @@
+2- Tabela Empresa
+-> Nome;Endereço
+SUMUS;Rua CANARIO
+
+3- Tabela Contas
+-> Telefone;Identificação;Data;Hora;Valor
+11 98149-1362;Aplicativos Digitais;24/05/2023;10:00:00;3,71
+11 98363-1188;Compra Online;24/05/2023;08:30:00;10,8
+11 98363-1188;Internet Ilimitado;25/05/2023;07:42:50;14,62
+11 98149-1362;Internet Limitado 3GB;30/05/2023;16:18:02;1,89
+11 98363-9766;Compra Online;27/05/2023;23:47:25;5,75
+
+4- Tabela Pessoas
+-> Nome;Telefone
+João;11 98149-1362
+Samir;11 98363-1188
+Pedro;11 98363-9766
+
+1- Criar o banco: ContaEmpresa
+2- Criar a tabela: Empresa (com Created_at updated_at)
+3- Criar a tabela: Contas (com Created_at updated_at)
+4- Criar a tabela: Pessoa (com Created_at updated_at)
+5- Fazer a associação da Tabela Pessoas com Contas
+
+- criar rotas empresa, contas, pessoas
+- criar o "POST" e "GET" para cada rota para salvar e pegar as informações do banco
+(Fazer um CRUD - Create(criar) Read(Ler)  | a fazer depois --> Update(Atualiza) Delete(Deletar))
+
+6- Ler o aquivo conta.txt
+7- Pegar as informações o arquivo conta.txt e colocar no banco de  dado nas tabelas respectivas
+8- fazer listagem de todas as contas - associando os nomes das Pessoas 
+9- Trazer depois o valor total.
