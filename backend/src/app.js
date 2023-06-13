@@ -5,7 +5,6 @@ const { sequelize } = require('./models/index')
 
 const app = express()
 app.use(cors())
-// Tratar as requisição com formato json
 app.use(express.json())
 app.use('/', routers)
 
