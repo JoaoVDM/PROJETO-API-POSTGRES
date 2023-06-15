@@ -31,7 +31,7 @@ router.delete('/apagarpessoas/:id', async (req, res) => {
     //verificar se o ID existe
     const pessoa_existe = await pessoas.findByPk(pessoa_id)
 
-    if(pessoa_existe) {
+    if (pessoa_existe) {
         await pessoas.destroy({
             where: {
                 id: pessoa_id

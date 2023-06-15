@@ -31,7 +31,7 @@ router.delete('/apagarcontas/:id', async (req, res) => {
     //verificar se o ID existe
     const conta_existe = await contas.findByPk(conta_id)
 
-    if(conta_existe) {
+    if (conta_existe) {
         await contas.destroy({
             where: {
                 id: conta_id
