@@ -2,40 +2,40 @@ const btn = document.querySelector('#salvar')
 
 btn.addEventListener('click', () => {
     // capturar os dados do formulario
-    const empresa = getDadosForm()
+    const pessoas = getDadosForm()
     // enviar os dados para api
-    enviarDadosParaAPI(empresa)
+    enviarDadosParaAPI(pessoas)
 })
 
 function getDadosForm() {
     const inputNome = document.querySelector('#Nome')
-    const inputEndereco = document.querySelector('#Endereco')
+    const inputTelefone = document.querySelector('#Telefone')
 
-    if (inputNome.value === null || inputEndereco.value === null) {
+    if (inputNome.value === null || inputTelefone.value === null) {
         console.log('campos vazios');
         return
     }
 
-    const empresa = {
+    const pessoas = {
         Nome: inputNome.value,
-        Endereço: inputEndereco.value
+        Telefone: inputTelefone.value
     }
-    return empresa
+    return pessoas
 }
 
-async function enviarDadosParaAPI(empresa) {
+async function enviarDadosParaAPI(pessoas) {
     try {
-        const resposta = await fetch('http://localhost:3000/empresa/registrarempresa1', {
+        const resposta = await fetch('http://localhost:3000/pessoas/registrarpessoas1', {
             method: 'POST',
             headers: {
                 Accept: 'application/json',
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(empresa)
+            body: JSON.stringify(pessoas)
         })
         if (resposta.status === 200) {
             limparCampos()
-            window.location.href = 'empresas.html'
+            window.location.href = 'pessoas.html'
         } else {
             console.log('Erro ao adicionar curso');
         }
@@ -46,5 +46,5 @@ async function enviarDadosParaAPI(empresa) {
 
 function limparCampos() {
     document.querySelector('#Nome').value = ''
-    document.querySelector('#Endereco').value = ''
+    document.querySelector('#Telefone').value = ''
 }
