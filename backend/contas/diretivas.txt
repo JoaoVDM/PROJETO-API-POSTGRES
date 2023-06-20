@@ -30,3 +30,5 @@ Pedro;11 98363-9766
 7- Pegar as informações o arquivo conta.txt e colocar no banco de  dado nas tabelas respectivas
 8- fazer listagem de todas as contas - associando os nomes das Pessoas 
 9- Trazer depois o valor total.
+
+10- Criar um botão que quando clicado vai gerar um arquivo exportado dos dados da tabela em formato .csv

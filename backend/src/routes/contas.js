@@ -44,7 +44,7 @@ router.delete('/apagarcontas/:id', async (req, res) => {
 });
 
 router.put('/updatecontas/:id', async (req, res) => {
-    const { Telefone, Identificação, Data, Hora, Valor } = req.body
+    const { Telefone, Identificacao, Dia, Hora, Valor } = req.body
     const contas_id = req.params.id;
     console.log('contas_id ::::::: ', contas_id);
     const empresa_existe = await contas.findByPk(contas_id)
@@ -52,8 +52,8 @@ router.put('/updatecontas/:id', async (req, res) => {
     if (empresa_existe) {
         await empresa.update({
             Telefone,
-            Identificação,
-            Data,
+            Identificacao,
+            Dia,
             Hora,
             Valor
         }, {
